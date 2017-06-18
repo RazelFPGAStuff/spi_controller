@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller
+Espi_controller
+Z1 w1468740563
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z4 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z8 8C:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_contoller.vhd
+Z9 FC:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_contoller.vhd
+l0
+L11
+VRMaB`@fJ;KaaJ`5=LHQ0C2
+!s100 eZzm?L;hVLAiMmcP9BzJC1
+Z10 OP;C;10.4a;61
+32
+Z11 !s110 1480965761
+!i10b 1
+Z12 !s108 1480965760.000000
+Z13 !s90 -reportprogress|300|-work|work|C:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_contoller.vhd|
+Z14 !s107 C:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_contoller.vhd|
+!i113 1
+Z15 o-work work -O0
+Z16 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 14 spi_controller 0 22 RMaB`@fJ;KaaJ`5=LHQ0C2
+l51
+L28
+Vzn@5kR>B;Yb=RVRCRzgLg0
+!s100 zk9G^a8an8XHRIM?8k??H0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Espi_tb
+Z17 w1468725414
+R6
+R7
+R0
+Z18 8C:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_tb.vhd
+Z19 FC:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_tb.vhd
+l0
+L35
+VJ3k``eUfSR12Zf7dVXE`23
+!s100 =lMdOM7jKXmzWY9A6HEO[0
+R10
+32
+Z20 !s110 1497802576
+!i10b 1
+Z21 !s108 1497802576.000000
+Z22 !s90 -reportprogress|300|-work|work|C:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_tb.vhd|
+Z23 !s107 C:/Modeltech_pe_edu_10.4a/examples/vhdl_workspace/spi_controller/spi_tb.vhd|
+!i113 1
+R15
+R16
+Abehavior
+R6
+R7
+Z24 DEx4 work 6 spi_tb 0 22 J3k``eUfSR12Zf7dVXE`23
+l79
+L38
+Z25 V@DRal`bF`QBnJm2CFVG?H2
+Z26 !s100 UEL;[[;V;@Z2cmzTKP9?B2
+R10
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R15
+R16

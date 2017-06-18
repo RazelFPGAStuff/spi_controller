@@ -1,0 +1,241 @@
+--------------------------------------------------------------------------------
+-- Company: 
+-- Engineer:
+--
+-- Create Date:   23:44:49 06/17/2016
+-- Design Name:   
+-- Module Name:   C:/FPGA/FPGA 2014/OpalKelly/Exercises/SPI_Controller/spi_tb.vhd
+-- Project Name:  SPI_Controller
+-- Target Device:  
+-- Tool versions:  
+-- Description:   
+-- 
+-- VHDL Test Bench Created by ISE for module: spi_controller
+-- 
+-- Dependencies:
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+--
+-- Notes: 
+-- This testbench has been automatically generated using types std_logic and
+-- std_logic_vector for the ports of the unit under test.  Xilinx recommends
+-- that these types always be used for the top-level I/O of a design in order
+-- to guarantee that the testbench will bind correctly to the post-implementation 
+-- simulation model.
+--------------------------------------------------------------------------------
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ 
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--USE ieee.numeric_std.ALL;
+ 
+ENTITY spi_tb IS
+END spi_tb;
+ 
+ARCHITECTURE behavior OF spi_tb IS 
+ 
+    -- Component Declaration for the Unit Under Test (UUT)
+ 
+    COMPONENT spi_controller
+    PORT(
+         clk : IN  std_logic;
+         reset : IN  std_logic;
+         EN : IN  std_logic;
+         RdWr : IN  std_logic;
+         CS : OUT  std_logic;
+         SPC : OUT  std_logic;
+         SDI : OUT  std_logic;
+         SDO : IN  std_logic;
+         regAddress : IN  std_logic_vector(5 downto 0);
+         writeData : IN  std_logic_vector(7 downto 0);
+         readData : OUT  std_logic_vector(7 downto 0);
+         dataReady : OUT  std_logic
+        );
+    END COMPONENT;
+    
+
+   --Inputs
+   signal clk : std_logic := '0';
+   signal reset : std_logic := '0';
+   signal EN : std_logic := '0';
+   signal RdWr : std_logic := '0';
+   signal SDO : std_logic := '0';
+   signal regAddress : std_logic_vector(5 downto 0) := (others => '0');
+   signal writeData : std_logic_vector(7 downto 0) := (others => '0');
+
+ 	--Outputs
+   signal CS : std_logic;
+   signal SPC : std_logic;
+   signal SDI : std_logic;
+   signal readData : std_logic_vector(7 downto 0);
+   signal dataReady : std_logic;
+
+   -- Clock period definitions
+   constant clk_period : time := 20 ns;
+ 
+BEGIN
+ 
+	-- Instantiate the Unit Under Test (UUT)
+   uut: spi_controller PORT MAP (
+          clk => clk,
+          reset => reset,
+          EN => EN,
+          RdWr => RdWr,
+          CS => CS,
+          SPC => SPC,
+          SDI => SDI,
+          SDO => SDO,
+          regAddress => regAddress,
+          writeData => writeData,
+          readData => readData,
+          dataReady => dataReady
+        );
+
+   -- Clock process definitions
+   clk_process :process
+   begin
+		clk <= '0';
+		wait for clk_period/2;
+		clk <= '1';
+		wait for clk_period/2;
+   end process;
+ 
+	-- reset asserted for T/2
+		--reset <= '1','0' after clk_period/2;
+		
+   -- Stimulus process
+   stim_proc: process
+   begin		
+
+		--wait until falling_edge (clk);
+		--wait until falling_edge (clk);
+		--wait until falling_edge (clk);
+		--wait until falling_edge (clk);
+		
+		
+--		EN <= '0';
+--		
+--		for i in 1 to 10 loop --count 10 clock
+--		
+--			wait until falling_edge (clk);
+--		
+--		end loop;
+
+--		reset <= '1';
+
+--		wait for 20 ns;
+
+--		reset <= '0';
+
+--		wait for 20 ns;
+		--wait for 5 us;
+		
+		EN <= '1';
+		
+		--wait until falling_edge (clk);
+		
+		RdWr <= '1'; --write 0 read 1
+		regAddress <= "111010";
+		writeData <= "11101001";
+		
+--		for i in 1 to 10 loop --count 10 clock
+--		
+--			wait until falling_edge (SPC);
+--		
+--		end loop;
+--		
+--		SDO <= '1';
+--		do 
+--		wait until falling_edge (clk);
+--		
+		
+----		wait until SPC='0' and SPC'event;
+----		SDO <= '1';
+----		
+----		wait until SPC='1' and SPC'event;
+----		SDO <= '0';
+--		
+
+		wait for 17.5 us;
+		
+
+		SDO <= '0';
+		
+		wait for 1 us;
+		
+		SDO <= '0';
+		
+		wait for 3 us;
+		SDO <= '0';
+		wait for 1 us;
+		
+		SDO <= '0'; 
+		
+		wait for 3 us;
+		
+		
+		SDO <= '0';
+		
+		wait for 1 us;
+		
+		SDO <= '0'; --
+		
+		wait for 3 us;
+		
+		
+		SDO <= '1'; 
+		
+		wait for 1 us;
+		
+		SDO <= '0'; --
+		
+		wait for 1 us;
+
+		SDO <= '1'; 
+		
+		wait for 1 us;
+		SDO <= '0'; --
+		
+		
+--		wait until falling_edge (clk);
+--		
+--		SDO <= '1';
+--		
+--		wait until falling_edge (clk);
+--		
+--		SDO <= '0';
+		
+--		for i in 1 to 34 loop --count 10 clock
+--		
+--			wait until falling_edge (clk);
+--		
+--		end loop;
+--		
+--		wait for 15 us;
+--		EN <= '0';
+		
+		--wait until falling_edge (dataReady);
+		
+		EN <= '0';
+		--wait until falling_edge (clk);
+
+		wait for 5 us;
+
+		reset <= '1';
+
+		wait for 1 us;
+
+		RdWr <= '1'; --write 0 read 1
+
+		reset <= '0';
+
+		wait for 5 us;
+
+		EN <= '1';
+      wait;
+   end process;
+
+END;
